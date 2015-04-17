@@ -40,7 +40,7 @@ casper.then(function (){
 	casper.click(x('//*[@id="loginform"]/div[3]/div[2]/button[1]'));
 });
 
-casper.wait(3000,function (){
+casper.wait(10000,function (){
 	casper.capture('C:/Projects/casperjs/workbook/png/homePage.png');
 });
 
@@ -286,6 +286,55 @@ casper.wait(2000,function (){
 	casper.capture('C:/Projects/casperjs/workbook/png/display_inserted_coffee_meal-logit.png');
 });
 
+/*activity*/
+
+casper.then(function (){
+	casper.click(x('//*[@id="main-logit"]/i'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('C:/Projects/casperjs/workbook/png/drawer-logit.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="index-search-results-scroll"]/div[1]/div[11]/div'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('C:/Projects/casperjs/workbook/png/select_activity-logit.png');
+});
+
+casper.then(function (){
+	casper.sendKeys(x('//*[@id="main-easy-search"]'), "squash")
+});
+
+casper.wait(5000,function (){
+	casper.capture('C:/Projects/casperjs/workbook/png/search_squash-logit.png');	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[text()="squash, general"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('C:/Projects/casperjs/workbook/png/select_squash-logit.png');	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="main-callback-modlog-enter"]'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('C:/Projects/casperjs/workbook/png/log_squash-logit.png');	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[1]/div[18]/div[1]/button/img'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('C:/Projects/casperjs/workbook/png/display_squash-logit.png');	
+});
 
 /***** END - Operation - logit ******/
 
@@ -347,7 +396,7 @@ casper.then(function (){
 	casper.click(x('//*[@id="right-index-search-results-scroll"]/div[1]/div[5]'));
 });
 
-casper.wait(3000,function (){
+casper.wait(10000,function (){
 	casper.capture('C:/Projects/casperjs/workbook/png/logoutPage.png');
 });
 
