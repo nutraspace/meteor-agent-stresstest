@@ -46,7 +46,6 @@ casper.wait(3000,function (){
 
 /***** END - Sign In ******/
 
-
 /***** BEGIN - Operation - dashboard ******/
 
 casper.then(function (){
@@ -207,17 +206,64 @@ casper.wait(2000,function (){
 
 /***** BEGIN - Operation - logit ******/
 
+/*food*/
+
 casper.then(function (){
-	casper.click(x('//*[@id="header-links"]/span'));
+	casper.click(x('//*[@id="main-logit"]/i'));
 });
 
 casper.wait(2000,function (){
 	casper.capture('C:/Projects/casperjs/workbook/png/drawer-logit.png');
 });
 
+casper.then(function (){
+	casper.click(x('//*[@id="index-search-results-scroll"]/div[1]/div[1]/div/header/span/div[2]'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('C:/Projects/casperjs/workbook/png/select_food-logit.png');
+});
+
+casper.then(function (){
+	casper.sendKeys(x('//*[@id="food-search"]'), "burger")
+});
+
+casper.wait(5000,function (){
+	casper.capture('C:/Projects/casperjs/workbook/png/results_burger-logit.png');	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[text()="Double Hamburger"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('C:/Projects/casperjs/workbook/png/select_DoubleHamburger-logit.png');	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="main-callback-food"]'));		
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[1]/div[6]/div[1]/button/img'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('C:/Projects/casperjs/workbook/png/select_-logit.png');	
+});
+
 /*meal*/
-/* casper.then(function (){
-	casper.click(x('//*[@id="index-search-results-scroll"]/div[1]/div[2]/div/header'));
+
+casper.then(function (){
+	casper.click(x('//*[@id="main-logit"]/i'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('C:/Projects/casperjs/workbook/png/drawer-logit.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="index-search-results-scroll"]/div[1]/div[2]/div/header/span/div[2]'));
 });
 
 casper.wait(2000,function (){
@@ -229,24 +275,30 @@ casper.wait(2000,function (){
 });
 
 casper.wait(2000,function (){
+	casper.capture('C:/Projects/casperjs/workbook/png/select_coffee_meal-logit.png');
+});
+
+casper.wait(2000,function (){
 	casper.click(x('//*[@id="main-callback-meal"]'));	
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/display_inserted_meal-logit.png');
-}); */
+	casper.capture('C:/Projects/casperjs/workbook/png/display_inserted_coffee_meal-logit.png');
+});
 
 
 /***** END - Operation - logit ******/
 
 /***** BEGIN - Operation - Messages_Notification ******/
 
+
+/*notification*/
 casper.then(function (){
 	casper.click(x('//*[@id="header-tools"]/div'));
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/drawer-Messages_Notification.png');
+	casper.capture('C:/Projects/casperjs/workbook/png/drawer-Messages_Notification1.png');
 });
 
 casper.then(function (){
@@ -257,14 +309,33 @@ casper.wait(2000,function (){
 	casper.capture('C:/Projects/casperjs/workbook/png/Notification-Messages_Notification.png');
 });
 
-/* casper.then(function (){
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[1]/div[16]/div[1]/button/img'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('C:/Projects/casperjs/workbook/png/drawer_closed-Messages_Notification.png');
+});
+
+/*messages*/
+casper.then(function (){
+	casper.click(x('//*[@id="header-tools"]/div'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('C:/Projects/casperjs/workbook/png/drawer-Messages_Notification2.png');
+});
+
+casper.then(function (){
 	casper.click(x('//*[@id="right-index-search-results-scroll"]/div[1]/div[3]/div/header'));
 });
 
 casper.wait(2000,function (){
 	casper.capture('C:/Projects/casperjs/workbook/png/Messages-Messages_Notification.png');
-}); */
+});
+
 /***** END - Operation - Messages_Notification ******/
+
 
 /*****  BEGIN - Logout ******/
 
