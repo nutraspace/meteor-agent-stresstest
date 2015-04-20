@@ -13,7 +13,7 @@ casper.wait(3000,function(){
 });
 
 casper.then(function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/landingPage.png');
+	casper.capture('png/landingPage.png');
 });
 
 /***** END - Landing Page ******/
@@ -25,7 +25,7 @@ casper.then(function (){
 });
 
 casper.wait(3000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/signPage.png');
+	casper.capture('png/signPage.png');
 });
 
 casper.then(function (){
@@ -41,7 +41,7 @@ casper.then(function (){
 });
 
 casper.wait(10000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/homePage.png');
+	casper.capture('png/homePage.png');
 });
 
 /***** END - Sign In ******/
@@ -53,7 +53,7 @@ casper.then(function (){
 });
 
 casper.wait(3000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/dashboard.png');
+	casper.capture('png/dashboard.png');
 });
 
 /***** BEGIN - Operation - food ******/
@@ -63,7 +63,7 @@ casper.then(function (){
 });
 
 casper.wait(3000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/food.png');
+	casper.capture('png/food.png');
 });
 
 /***** BEGIN - Operation - stats ******/
@@ -73,7 +73,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/stats.png');
+	casper.capture('png/stats.png');
 });
 
 /***** BEGIN - Operation - provider ******/
@@ -83,7 +83,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/goal.png');
+	casper.capture('png/goal.png');
 });
 
 /***** BEGIN - Operation - provider ******/
@@ -93,7 +93,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/provider.png');
+	casper.capture('png/provider.png');
 });
 
 /***** BEGIN - Operation - profile ******/
@@ -103,7 +103,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/profile.png');
+	casper.capture('png/profile.png');
 });
 
 casper.then(function (){
@@ -111,7 +111,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/general-profile.png');
+	casper.capture('png/general-profile.png');
 });
 
 casper.then(function (){
@@ -119,7 +119,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/nutrition-profile.png');	
+	casper.capture('png/nutrition-profile.png');	
 });
 
 casper.then(function (){
@@ -127,7 +127,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/fitness-profile.png');	
+	casper.capture('png/fitness-profile.png');	
 });
 
 casper.then(function (){
@@ -135,7 +135,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/wearables_devices-profile.png');	
+	casper.capture('png/wearables_devices-profile.png');	
 });
 
 casper.then(function (){
@@ -143,7 +143,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/additional_diagnostics-profile.png');	
+	casper.capture('png/additional_diagnostics-profile.png');	
 });
 
 casper.then(function (){
@@ -151,7 +151,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/payment_settings-profile.png');	
+	casper.capture('png/payment_settings-profile.png');	
 });
 
 casper.then(function (){
@@ -159,7 +159,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/getting_started-profile.png');	
+	casper.capture('png/getting_started-profile.png');	
 });
 
 casper.then(function (){
@@ -167,7 +167,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/dietary_needs-profile.png');	
+	casper.capture('png/dietary_needs-profile.png');	
 });
 
 /***** END - Operation - profile ******/
@@ -183,7 +183,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/typeahead_results-search.png');	
+	casper.capture('png/typeahead_results-search.png');	
 });
 
 casper.wait(2000,function (){
@@ -191,7 +191,7 @@ casper.wait(2000,function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/typeahead_selected-search.png');	
+	casper.capture('png/typeahead_selected-search.png');	
 });
 
 casper.wait(2000,function (){
@@ -199,7 +199,7 @@ casper.wait(2000,function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/results-search.png');	
+	casper.capture('png/results-search.png');	
 });
 
 /***** END - Operation - search ******/
@@ -213,7 +213,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/drawer-logit.png');
+	casper.capture('png/drawer-logit.png');
 });
 
 casper.then(function (){
@@ -221,7 +221,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/select_food-logit.png');
+	casper.capture('png/select_food-logit.png');
 });
 
 casper.then(function (){
@@ -229,7 +229,7 @@ casper.then(function (){
 });
 
 casper.wait(5000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/results_burger-logit.png');	
+	casper.capture('png/results_burger-logit.png');	
 });
 
 casper.wait(2000,function (){
@@ -237,7 +237,7 @@ casper.wait(2000,function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/select_DoubleHamburger-logit.png');	
+	casper.capture('png/select_DoubleHamburger-logit.png');	
 });
 
 casper.wait(2000,function (){
@@ -249,7 +249,7 @@ casper.wait(2000,function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/select_-logit.png');	
+	casper.capture('png/select_-logit.png');	
 });
 
 /*meal*/
@@ -259,7 +259,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/drawer-logit.png');
+	casper.capture('png/drawer-logit.png');
 });
 
 casper.then(function (){
@@ -267,7 +267,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/select_meal-logit.png');
+	casper.capture('png/select_meal-logit.png');
 });
 
 casper.wait(2000,function (){
@@ -275,7 +275,7 @@ casper.wait(2000,function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/select_coffee_meal-logit.png');
+	casper.capture('png/select_coffee_meal-logit.png');
 });
 
 casper.wait(2000,function (){
@@ -283,7 +283,7 @@ casper.wait(2000,function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/display_inserted_coffee_meal-logit.png');
+	casper.capture('png/display_inserted_coffee_meal-logit.png');
 });
 
 /*activity*/
@@ -293,15 +293,15 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/drawer-logit.png');
-});
-
-casper.then(function (){
-	casper.click(x('//*[@id="index-search-results-scroll"]/div[1]/div[11]/div'));
+	casper.capture('png/drawer-logit.png');
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/select_activity-logit.png');
+	casper.click(x('//*[text()="Activity"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/select_activity-logit.png');
 });
 
 casper.then(function (){
@@ -309,7 +309,7 @@ casper.then(function (){
 });
 
 casper.wait(5000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/search_squash-logit.png');	
+	casper.capture('png/search_squash-logit.png');	
 });
 
 casper.wait(2000,function (){
@@ -317,7 +317,7 @@ casper.wait(2000,function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/select_squash-logit.png');	
+	casper.capture('png/select_squash-logit.png');	
 });
 
 casper.wait(2000,function (){
@@ -325,7 +325,7 @@ casper.wait(2000,function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/log_squash-logit.png');	
+	casper.capture('png/log_squash-logit.png');	
 });
 
 casper.wait(2000,function (){
@@ -333,7 +333,7 @@ casper.wait(2000,function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/display_squash-logit.png');	
+	casper.capture('png/display_squash-logit.png');	
 });
 
 /***** END - Operation - logit ******/
@@ -347,7 +347,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/drawer-Messages_Notification1.png');
+	casper.capture('png/drawer-Messages_Notification1.png');
 });
 
 casper.then(function (){
@@ -355,7 +355,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/Notification-Messages_Notification.png');
+	casper.capture('png/Notification-Messages_Notification.png');
 });
 
 casper.then(function (){
@@ -363,7 +363,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/drawer_closed-Messages_Notification.png');
+	casper.capture('png/drawer_closed-Messages_Notification.png');
 });
 
 /*messages*/
@@ -372,7 +372,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/drawer-Messages_Notification2.png');
+	casper.capture('png/drawer-Messages_Notification2.png');
 });
 
 casper.then(function (){
@@ -380,7 +380,7 @@ casper.then(function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/Messages-Messages_Notification.png');
+	casper.capture('png/Messages-Messages_Notification.png');
 });
 
 /***** END - Operation - Messages_Notification ******/
@@ -397,7 +397,7 @@ casper.then(function (){
 });
 
 casper.wait(10000,function (){
-	casper.capture('C:/Projects/casperjs/workbook/png/logoutPage.png');
+	casper.capture('png/logoutPage.png');
 });
 
 /*****  END - Logout ******/
