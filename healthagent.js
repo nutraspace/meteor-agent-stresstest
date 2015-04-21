@@ -62,9 +62,335 @@ casper.then(function (){
 	casper.click(x('//*[@id="horizontal-nav"]/div[2]/a'));
 });
 
-casper.wait(3000,function (){
+casper.wait(2000,function (){
 	casper.capture('png/food.png');
 });
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[2]/div/div/div[2]/div[1]/div[3]/a/span'));
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[1]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Poly_Fat-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[2]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Selenium-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[3]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Total_Sugars-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[4]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Iodine-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[5]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Vitamin_E_Alpha_Taco-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[6]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Calories_from_Fat-food.png');
+});
+
+/* casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div'));	
+}); */
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[1]'));	
+});
+
+casper.then(function (){
+	casper.capture('png/Vitamin_A_IU-food.png');
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[2]'));	
+});
+
+casper.then(function (){
+	casper.capture('png/Magnesium-food.png');
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[3]'));	
+});
+
+casper.then(function (){
+	casper.capture('png/Vitamin_B3-food.png');
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[4]'));	
+});
+
+casper.then(function (){
+	casper.capture('png/Vitamin_B1-food.png');
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[5]'));	
+});
+
+casper.then(function (){
+	casper.capture('png/Vitamin_C-food.png');
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[6]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Folate-food.png');
+});
+
+/* casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div'));	
+}); */
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[1]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Vitamin_D_IU-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[2]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Sodium-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[3]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Calcium-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[4]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Protein-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[5]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Vitamin_A_RAE-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[6]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Cholesterol_food.png');
+});
+
+/* casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div'));	
+}); */
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[1]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Vitamin_B2-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[2]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Calories-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[3]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Vitamin_B12-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[4]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Vitamin_E_IU-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[5]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Phosphorus-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[6]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Trans_Fatty_Acid-food.png');
+});
+
+/* casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div'));	
+}); */
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[1]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Mono_Fat-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[2]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Molybdenum-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[3]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Saturated_Fat-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[4]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Copper-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[5]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Iron-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[6]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Carbohydrates-food.png');
+});
+
+/* casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div'));	
+}); */
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[1]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Dietary_Fiber-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[2]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Vitamin_B6-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[3]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Potassium-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[4]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Zinc-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[5]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Vitamin_D_MCG-food.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[6]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/Fat_food.png');
+});
+
+/* casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div'));	
+}); */
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a'));	
+});
+
+casper.then(function (){
+	casper.capture('png/Vitamin_A_RE-food.png');
+});
+
+/***** END - Operation - food ******/
 
 /***** BEGIN - Operation - stats ******/
 
@@ -228,11 +554,11 @@ casper.then(function (){
 	casper.sendKeys(x('//*[@id="food-search"]'), "burger")
 });
 
-casper.wait(5000,function (){
+casper.wait(10000,function (){
 	casper.capture('png/results_burger-logit.png');	
 });
 
-casper.wait(2000,function (){
+casper.then(function (){
 	casper.click(x('//*[text()="Double Hamburger"]'));	
 });
 
