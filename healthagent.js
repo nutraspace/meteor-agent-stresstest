@@ -402,7 +402,7 @@ casper.wait(2000,function (){
 	casper.capture('png/client/food/range/stats.png');
 });
 
-/***** BEGIN - Operation - provider ******/
+/***** BEGIN - Operation - goal ******/
 
 casper.then(function (){
 	casper.click(x('//*[@id="horizontal-nav"]/div[4]/a'));
@@ -411,6 +411,72 @@ casper.then(function (){
 casper.wait(2000,function (){
 	casper.capture('png/client/goal/goal.png');
 });
+
+casper.wait(2000,function (){
+	casper.click(x('//*[text()="General Health & Wellness"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/client/goal/select_GH&Wgoal-goal.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[2]/div[1]/div/div[3]/div/div[4]/div/div'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/client/goal/adopted_GH&Wgoal-goal.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[2]/div[1]/div/div[3]/div/div[1]/div/div'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/client/goal/progress_GH&Wgoal-goal.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[2]/div[1]/div/div[3]/div/div[2]/div/div'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/client/goal/logs_GH&Wgoal-goal.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[2]/div[1]/div/div[3]/div/div[3]/div/div'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/client/goal/rules_GH&Wgoal-goal.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[2]/div[1]/div/div[3]/div/div[4]/div/div'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/client/goal/settings_GH&Wgoal-goal.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[2]/div[2]/div/div[2]/div/div[4]/div/div[1]/div/div'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/client/goal/select_delete_GH&Wgoal-goal.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[2]/div[2]/div/div[2]/div/div[4]/div/div[2]/div/div'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('png/client/goal/confirm_delete_GH&Wgoal-goal.png');
+});
+
+/***** END - Operation - goal ******/
 
 /***** BEGIN - Operation - provider ******/
 
