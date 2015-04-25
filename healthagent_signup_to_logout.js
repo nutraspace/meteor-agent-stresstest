@@ -25,7 +25,7 @@ casper.wait(10000,function (){
 });
 
 casper.then(function (){
-	casper.sendKeys(x('//*[@id="email"]'), "test8@healthagent.com")
+	casper.sendKeys(x('//*[@id="email"]'), "test9@healthagent.com")
 });
 
 casper.then(function (){
