@@ -33,7 +33,7 @@ casper.then(function (){
 /***** BEGIN - Sign Up ******/
 
 casper.wait(10000,function (){
-	casper.capture('/var/www/html//var/www/html/png/client/signup/Before_Signup.png');
+	casper.capture('/var/www/html/var/www/html/png/client/signup/Before_Signup.png');
 });
 
 casper.then(function (){
