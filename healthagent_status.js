@@ -1,3 +1,13 @@
+/*
+Created by: Kiran Betgeri
+Last edited by: Kiran Betgeri
+File: healthagent_signup_to_logout.js
+Company: NutraSpace, LLC
+Created on: April 25 2015
+Last edited on: April 27 2015
+Version: 1.1
+*/
+
 /***********/
 
 var casper = require('casper').create();
@@ -6,16 +16,18 @@ casper.userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML,
 
 var x = require('casper').selectXPath;
 
-casper.start('https://agentdev.nutraspace.com/').viewport(1200,800);
+phantom.clearCookies();
+
+casper.start('http://10.0.0.28:4000').viewport(1280,1024);
 
 casper.then(function (){
-	casper.capture('png/status/status.png');
+	casper.capture('/var/www/html/png/status/status.png');
 });
 
 casper.then(function(){
 	this.echo("\n");		
 	this.echo("NOTE:");
-	this.echo("1 - Open png/status/status.png, if you don't see the landing page in the screenshot then run the healthagent_logout.js script");	
+	this.echo("1 - Open /var/www/html/png/status/status.png, if you don't see the landing page in the screenshot then run the healthagent_logout.js script");	
 	this.echo("\n");
 	this.echo("SCRIPTS:");	
 	this.echo("1 - healthagent_status.js - check healthagent status");
