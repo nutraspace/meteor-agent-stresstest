@@ -14,11 +14,17 @@ casper.userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML,
 
 var x = require('casper').selectXPath;
 
+/* get variables from command line */
+
+    var email = casper.cli.get("email");
+    var password = casper.cli.get("password");	
+    var url = casper.cli.get("url");	
+	
 /***** BEGIN - Landing Page ******/
 
 phantom.clearCookies();
 
-casper.start('http://10.0.0.28:4000').viewport(1280,1024);
+casper.start(url).viewport(1280,1024);
 
 casper.wait(3000,function(){
 	this.echo(this.getTitle());
@@ -37,15 +43,15 @@ casper.wait(10000,function (){
 });
 
 casper.then(function (){
-	casper.sendKeys(x('//*[@id="email"]'), "test19@healthagent.com")
+	casper.sendKeys(x('//*[@id="email"]'), email)
 });
 
 casper.then(function (){
-	casper.sendKeys(x('//*[@id="password"]'), "He@lth2014Agent")
+	casper.sendKeys(x('//*[@id="password"]'), password)
 });
 
 casper.then(function (){
-	casper.sendKeys(x('//*[@id="password_confirmation"]'), "He@lth2014Agent")
+	casper.sendKeys(x('//*[@id="password_confirmation"]'), password)
 });
 
 casper.waitForSelector(x('//*[@id="registrationform"]/form/div[3]/div/button'),function (){
