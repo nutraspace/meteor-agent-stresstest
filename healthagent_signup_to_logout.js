@@ -33,11 +33,11 @@ casper.then(function (){
 /***** BEGIN - Sign Up ******/
 
 casper.wait(10000,function (){
-	casper.capture('/var/www/html/var/www/html/png/client/signup/Before_Signup.png');
+	casper.capture('/var/www/html/png/client/signup/Before_Signup.png');
 });
 
 casper.then(function (){
-	casper.sendKeys(x('//*[@id="email"]'), "test9@healthagent.com")
+	casper.sendKeys(x('//*[@id="email"]'), "test19@healthagent.com")
 });
 
 casper.then(function (){
@@ -217,7 +217,7 @@ casper.wait(2000,function (){
 
 // >>> connect wearables_devices
 
-casper.then(function (){
+/* casper.then(function (){
 	casper.click(x('//*[@id="wearables"]/div/div[1]/div[2]/div/div[1]/div/div/span'));
 });
 
@@ -235,7 +235,7 @@ casper.then(function (){
 
 casper.wait(2000,function (){
 	casper.click(x('//*[@id="wearables"]/div/div[1]/div[2]/div/div[2]/button'));		
-});
+}); */
 
 /* additional_diagnostics */
 casper.then(function (){
@@ -247,27 +247,27 @@ casper.wait(2000,function (){
 });
 
 casper.then(function (){
-	casper.sendKeys(x('//*[@id="blood_pressure_systolic"]/div/div/div/input'), "180")
+	casper.sendKeys(x('//*[@id="blood_pressure_systolic"]/div/div/div/input'), "115")
 });
 
 casper.then(function (){
-	casper.sendKeys(x('//*[@id="blood_pressure_diastolic"]/div/div/div/input'), "180")
+	casper.sendKeys(x('//*[@id="blood_pressure_diastolic"]/div/div/div/input'), "65")
 });
 
 casper.then(function (){
-	casper.sendKeys(x('//*[@id="cholesterol_total"]/div/div/div/input'), "180")
+	casper.sendKeys(x('//*[@id="cholesterol_total"]/div/div/div/input'), "130")
 });
 
 casper.then(function (){
-	casper.sendKeys(x('//*[@id="cholesterol_hdl"]/div/div/div/input'), "180")
+	casper.sendKeys(x('//*[@id="cholesterol_hdl"]/div/div/div/input'), "35")
 });
 
 casper.then(function (){
-	casper.sendKeys(x('//*[@id="cholesterol_ldl"]/div/div/div/input'), "180")
+	casper.sendKeys(x('//*[@id="cholesterol_ldl"]/div/div/div/input'), "88")
 });
 
 casper.then(function (){
-	casper.sendKeys(x('//*[@id="glucose_fasting"]/div/div/div/input'), "180")
+	casper.sendKeys(x('//*[@id="glucose_fasting"]/div/div/div/input'), "98")
 });
 
 casper.wait(2000,function (){
@@ -345,7 +345,7 @@ casper.wait(2000,function (){
 });
 
 casper.then(function (){
-	casper.click(x('//*[@id="overview"]/div[9]/div[1]/a'));
+	casper.click(x('//*[@id="overview"]/div[7]/div[1]/a'));
 });
 
 casper.wait(2000,function (){
@@ -460,7 +460,7 @@ casper.wait(2000,function (){
 });
 
 casper.then(function (){
-	casper.click(x('//*[text()="food"]'));	
+	casper.click(x('//*[text()="Food"]'));	
 });
 
 casper.wait(2000,function (){
@@ -1231,7 +1231,7 @@ casper.wait(2000,function (){
 });
 
 casper.then(function (){
-	casper.click(x('//*[text()="Water H2O"]'));	
+	casper.click(x('//*[text()="Water"]'));	
 });
 
 casper.wait(2000,function (){

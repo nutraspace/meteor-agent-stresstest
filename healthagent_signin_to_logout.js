@@ -41,7 +41,7 @@ casper.wait(3000,function (){
 });
 
 casper.then(function (){
-	casper.sendKeys(x('//*[@id="username"]'), "nutraspaceagent1@gmail.com")
+	casper.sendKeys(x('//*[@id="username"]'), "test9@healthagent.com")
 });
 
 casper.then(function (){
@@ -248,7 +248,7 @@ casper.wait(2000,function (){
 });
 
 casper.then(function (){
-	casper.click(x('//*[@id="index-search-results-scroll"]/div[1]/div[1]/div/header/span/div[2]'));
+	casper.click(x('//*[text()="Food"]'));	
 });
 
 casper.wait(2000,function (){
@@ -280,12 +280,12 @@ casper.wait(2000,function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('/var/www/html/png/client/logit/food/select_-logit.png');	
+	casper.capture('/var/www/html/png/client/logit/food/close-logit.png');	
 });
 
 /*meal*/
 
-casper.then(function (){
+/* casper.then(function (){
 	casper.click(x('//*[@id="main-logit"]/i'));
 });
 
@@ -315,7 +315,7 @@ casper.wait(2000,function (){
 
 casper.wait(2000,function (){
 	casper.capture('/var/www/html/png/client/logit/meal/display_inserted_coffee_meal-logit.png');
-});
+}); */
 
 /*activity*/
 
@@ -364,11 +364,302 @@ casper.wait(2000,function (){
 });
 
 casper.wait(2000,function (){
-	casper.capture('/var/www/html/png/client/logit/activity/display_squash-logit.png');	
+	casper.capture('/var/www/html/png/client/logit/activity/close-logit.png');	
+});
+
+/*Disease*/
+
+casper.then(function (){
+	casper.click(x('//*[@id="main-logit"]/i'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/disease/drawer-logit.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[text()="Disease"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/disease/select_disease-logit.png');
+});
+
+casper.then(function (){
+	casper.sendKeys(x('//*[@id="modlog-enter-search"]'), "diabetes")
+});
+
+casper.wait(10000,function (){
+	casper.capture('/var/www/html/png/client/logit/disease/results_diabetes-logit.png');	
+});
+
+casper.then(function (){
+	casper.click(x('//*[text()="diabetes insipidus, nephrogenic, type ii"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/disease/select_diabetes-logit.png');	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="main-callback-modlog-enter"]'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/disease/display_diabetes-logit.png');	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[1]/div[16]/div[1]/button/img'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/disease/close-logit.png');	
+});
+
+/*Medication*/
+
+/* casper.then(function (){
+	casper.click(x('//*[@id="main-logit"]/i'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/medication/drawer-logit.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[text()="Medication"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/medication/select_medication-logit.png');
+});
+
+casper.then(function (){
+	casper.sendKeys(x('//*[@id="modlog-enter-search"]'), "advil")
+});
+
+casper.wait(10000,function (){
+	casper.capture('/var/www/html/png/client/logit/medication/results_advil-logit.png');	
+});
+
+casper.then(function (){
+	casper.click(x('//*[text()="advil"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/medication/select_advil-logit.png');	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="main-callback-modlog-enter"]"]'));		
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[1]/div[16]/div[1]/button/img'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/medication/close-logit.png');	
+});
+ */
+ 
+ /* Feeling */
+
+casper.then(function (){
+	casper.click(x('//*[@id="main-logit"]/i'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/feeling/drawer-logit.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[text()="Feeling"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/feeling/select_feeling-logit.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[text()="good"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/feeling/select_good-logit.png');	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="main-callback-modlog-enter"]'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/feeling/display_good-logit.png');	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[1]/div[16]/div[1]/button/img'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/feeling/close-logit.png');	
+});
+
+/* Weight */
+
+casper.then(function (){
+	casper.click(x('//*[@id="main-logit"]/i'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/weight/drawer-logit.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[text()="Weight"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/weight/select_weight-logit.png');
+});
+
+casper.then(function (){
+	casper.sendKeys(x('//*[@id="modlog-enter-search"]'), "220")
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="main-callback-modlog-enter"]'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/weight/display_weight-logit.png');	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[1]/div[16]/div[1]/button/img'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/weight/close-logit.png');	
+});
+
+/*Waist Size*/
+
+casper.then(function (){
+	casper.click(x('//*[@id="main-logit"]/i'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/waist_size/drawer-logit.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[text()="Waist Size"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/waist_size/select_waist_size-logit.png');
+});
+
+casper.then(function (){
+	casper.sendKeys(x('//*[@id="modlog-enter-search"]'), "42")
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="main-callback-modlog-enter"]'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/waist_size/display_waist_size-logit.png');	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[1]/div[16]/div[1]/button/img'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/waist_size/close-logit.png');	
+});
+
+/*Water*/
+
+casper.then(function (){
+	casper.click(x('//*[@id="main-logit"]/i'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/water/drawer-logit.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[text()="Water"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/water/select_water-logit.png');
+});
+
+casper.then(function (){
+	casper.sendKeys(x('//*[@id="modlog-enter-search"]'), "7")
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="main-callback-modlog-enter"]'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/water/display_water-logit.png');	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[1]/div[16]/div[1]/button/img'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/water/close-logit.png');	
+});
+
+/*Smoker*/
+
+casper.then(function (){
+	casper.click(x('//*[@id="main-logit"]/i'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/smoker/drawer-logit.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[text()="Smoker"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/smoker/select_smoker-logit.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[@id="modlog-enter-search-results-scroll"]/div[1]/div[2]/div[2]/span'));	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="main-callback-modlog-enter"]'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/smoker/display_smoker-logit.png');	
+});
+
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="power"]/div[1]/div[16]/div[1]/button/img'));		
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/logit/smoker/close-logit.png');	
 });
 
 casper.then(function(){
-	this.echo("STEP 5 - Logit Operation Success");
+	this.echo("STEP 4 - Logit Operation Success");
 });
 
 /***** END - Operation - logit ******/
@@ -708,7 +999,7 @@ casper.then(function (){
 });
 
 casper.then(function(){
-	this.echo("STEP 6 - Food Operation Success");
+	this.echo("STEP 5 - Food Operation Success");
 });
 
 /***** END - Operation - food ******/
@@ -719,12 +1010,48 @@ casper.then(function (){
 	casper.click(x('//*[@id="horizontal-nav"]/div[3]/a'));
 });
 
+casper.then(function (){
+	casper.click(x('//*[text()="Activity"]'));	
+});
+
 casper.wait(2000,function (){
-	casper.capture('/var/www/html/png/client/stats/range/stats.png');
+	casper.capture('/var/www/html/png/client/stat/activity/activity-stat.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[text()="Water H2O"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/stat/water/water-stat.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[text()="Weight"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/stat/weight/weight-stat.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[text()="Feeling"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/stat/feeling/feeling-stat.png');
+});
+
+casper.then(function (){
+	casper.click(x('//*[text()="Waist Size"]'));	
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/stat/waist_size/waist-stat.png');
 });
 
 casper.then(function(){
-	this.echo("STEP 7 - Stats Operation Success");
+	this.echo("STEP 6 - Stats Operation Success");
 });
 
 /***** END - Operation - stats ******/
