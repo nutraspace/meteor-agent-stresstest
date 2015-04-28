@@ -1,4 +1,4 @@
-@!/bin/bash
+#!/bin/bash
 echo > accounts
 printf "how many emails do you want to create?"
 read n
