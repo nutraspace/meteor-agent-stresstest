@@ -1,2 +1,2 @@
 #!/bin/bash
-kill $(ps aux | grep 'immortalCasper' | awk '{print $2}')
+kill $(ps aux | grep 'healthagent_immortalCasper' | awk '{print $2}')

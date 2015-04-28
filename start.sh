@@ -37,16 +37,16 @@ while read line; do Drones=("${Drones[@]}" "$line"); done < drones
 # copy all files to the Drones
 for i in "${Drones[@]}"
 do
-   scp parties-stress.js $i:$directory
-   scp immortalCasper.sh $i:$directory
+   scp healthagent_signup_to_logout.js $i:$directory
+   scp healthagent_immortalCasper.sh $i:$directory
    scp accounts $i:$directory
-   ssh $i chmod +x $directory/immortalCasper.sh
+   ssh $i chmod +x $directory/healthagent_immortalCasper.sh
 done
 
 
 # run casper in all drones
 for i in "${Drones[@]}"
 do
-   ssh $i "nohup $directory/immortalCasper.sh -u $url -p $password > /dev/null 2>&1 & "
+   ssh $i "nohup $directory/healthagent_immortalCasper.sh -u $url -p $password > /dev/null 2>&1 & "
    echo Started the immortal Casper on $i
 done

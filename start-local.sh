@@ -20,6 +20,6 @@ i=0
 # run casper locally
 while [[ $i -lt $drones ]]
 do
-    nohup ./immortalCasper.sh -u http://localhost:3000 -p password > /dev/null 2>&1 &
+    nohup ./healthagent_immortalCasper.sh -u http://localhost:3000 -p password > /dev/null 2>&1 &
     i=$[$i+1]
 done
