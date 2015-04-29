@@ -71,13 +71,10 @@ casper.then(function(){
 /***** BEGIN - Complete Profile ******/
 
 casper.then(function (){
-	casper.click(x('//*[@id="horizontal-nav"]/div[6]/a'));
+	casper.click(x('//*[text()="Profile"]'));
 });
 
 /* general */
-casper.then(function (){
-	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[1]'));
-});
 
 casper.wait(2000,function (){
 	casper.capture('/var/www/html/png/client/profile/general/empty_general-profile.png');
@@ -392,7 +389,7 @@ casper.then(function(){
 /***** BEGIN - Operation - goal ******/
 
 casper.then(function (){
-	casper.click(x('//*[@id="horizontal-nav"]/div[4]/a'));
+	casper.click(x('//*[text()="Goals"]'));
 });
 
 casper.wait(2000,function (){
@@ -885,7 +882,7 @@ casper.then(function(){
 /***** BEGIN - Operation - food ******/
 
 casper.then(function (){
-	casper.click(x('//*[@id="horizontal-nav"]/div[2]/a'));
+	casper.click(x('//*[text()="Food"]'));
 });
 
 casper.wait(2000,function (){
@@ -893,11 +890,11 @@ casper.wait(2000,function (){
 });
 
 casper.then(function (){
-	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[2]/div/div/div[2]/div[1]/div[3]/a/span'));
+	casper.click(x('//*[text()="Range"]'));
 });
 
 casper.then(function (){
-	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[1]'));	
+	casper.click(x('//*[text()="Poly Fat"]'));
 });
 
 casper.wait(2000,function (){
@@ -905,7 +902,7 @@ casper.wait(2000,function (){
 });
 
 casper.then(function (){
-	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[2]'));	
+	casper.click(x('//*[text()="Selenium"]'));
 });
 
 casper.wait(2000,function (){
@@ -913,7 +910,7 @@ casper.wait(2000,function (){
 });
 
 casper.then(function (){
-	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[3]'));	
+	casper.click(x('//*[text()="Total Sugars"]'));
 });
 
 casper.wait(2000,function (){
@@ -1225,7 +1222,7 @@ casper.then(function(){
 /***** BEGIN - Operation - stats ******/
 
 casper.then(function (){
-	casper.click(x('//*[@id="horizontal-nav"]/div[3]/a'));
+	casper.click(x('//*[text()="Stats"]'));
 });
 
 casper.then(function (){
@@ -1277,7 +1274,7 @@ casper.then(function(){
 /***** BEGIN - Operation - provider ******/
 
 casper.then(function (){
-	casper.click(x('//*[@id="horizontal-nav"]/div[5]/a'));
+	casper.click(x('//*[text()="Providers"]'));
 });
 
 casper.wait(2000,function (){
@@ -1309,7 +1306,7 @@ casper.then(function(){
 /***** BEGIN - Operation - search ******/
 
 casper.then(function (){
-	casper.click(x('//*[@id="header-tools"]/a/div'));	
+	casper.click(x('//*[text()="Dashboard"]'));
 });
 
 casper.then(function (){
@@ -1401,7 +1398,7 @@ casper.then(function (){
 });
 
 casper.then(function (){
-	casper.click(x('//*[@id="right-index-search-results-scroll"]/div[1]/div[5]'));
+	casper.click(x('//*[text()="Logout"]'));
 });
 
 casper.wait(10000,function (){
