@@ -30,7 +30,7 @@ casper.wait(2000,function (){
 });
 
 casper.then(function (){
-	casper.click(x('//*[@id="header-tools"]/div'));
+	casper.click(x('//*[text()="Logout"]'));
 });
 
 casper.then(function (){
