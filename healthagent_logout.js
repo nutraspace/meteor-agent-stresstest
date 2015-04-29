@@ -30,11 +30,11 @@ casper.wait(2000,function (){
 });
 
 casper.then(function (){
-	casper.click(x('//*[text()="Logout"]'));
+	casper.click(x('//*[@id="header-tools"]/div'));
 });
 
 casper.then(function (){
-	casper.click(x('//*[@id="right-index-search-results-scroll"]/div[1]/div[5]'));
+	casper.click(x('//*[text()="Logout"]'));
 });
 
 casper.wait(10000,function (){
