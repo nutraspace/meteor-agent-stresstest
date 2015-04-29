@@ -584,7 +584,7 @@ casper.wait(2000,function (){
 
 /*Disease*/
 
-casper.then(function (){
+/* casper.then(function (){
 	casper.click(x('//*[@id="main-logit"]/i'));
 });
 
@@ -630,7 +630,7 @@ casper.wait(2000,function (){
 
 casper.wait(2000,function (){
 	casper.capture('/var/www/html/png/client/logit/disease/close-logit.png');	
-});
+}); */
 
 /*Medication*/
 
