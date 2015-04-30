@@ -28,6 +28,9 @@ casper.start(url).viewport(1280,1024);
 
 casper.wait(3000,function(){
 	this.echo(this.getTitle());
+	this.echo("--------------------------");	
+	this.echo(email);	
+	this.echo("--------------------------");	
 });
 
 casper.then(function (){
