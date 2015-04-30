@@ -4,7 +4,7 @@ Last edited by: Kiran Betgeri
 File: healthagent_signup_to_logout.js
 Company: NutraSpace, LLC
 Created on: April 25 2015
-Last edited on: April 27 2015
+Last edited on: April 30 2015
 Version: 1.1
 */
 
@@ -20,9 +20,6 @@ var email = casper.cli.get("email");
 var password = casper.cli.get("password");	
 var url = casper.cli.get("url");	
 	
-/* flag to test if email ID exist in the system or now */	
-var signup_error = "false";	
-	
 /***** BEGIN - Landing Page ******/
 
 phantom.clearCookies();
@@ -37,6 +34,10 @@ casper.wait(3000,function(){
 });
 
 casper.then(function (){
+	casper.reload("http://10.0.0.28:4000/");
+});
+
+casper.wait(5000, function (){
 	casper.capture('/var/www/html/png/client/landingpage/LandingPage.png');
 });
 
@@ -64,13 +65,9 @@ casper.waitForSelector(x('//*[@id="registrationform"]/form/div[3]/div/button'),f
 	casper.click(x('//*[@id="registrationform"]/form/div[3]/div/button'));
 });
 
-// Check if email id already exists, for this we check the error message on the screen 
-if (casper.exists(x('//*[@id="registrationform"]/form/div[3]/div[1]'))) {
-	signup_error = "true";
-}
-
+// Check if email id already exists (for this we check the error message on the screen). Based on this we decide to sign in/sign up.
 casper.then(function (){
-	if (signup_error == "true")
+	if (casper.exists(x('//*[@id="registrationform"]/form/div[3]/div[1]')))
 		{
 			//Sign In
 			casper.then(function (){
