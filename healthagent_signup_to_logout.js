@@ -46,7 +46,11 @@ casper.wait(5000, function (){
 //Sign Up
 
 casper.then(function (){
-	casper.capture('/var/www/html/png/client/signup/signup/SignUpPage.png');
+	casper.reload("http://10.0.0.28:4000/");
+});
+
+casper.wait(5000, function (){
+	casper.capture('/var/www/html/png/client/signup/signup/SignUpPage_AfterReload.png');
 });
 
 casper.then(function (){
@@ -63,6 +67,10 @@ casper.then(function (){
 
 casper.waitForSelector(x('//*[@id="registrationform"]/form/div[3]/div/button'),function (){
 	casper.click(x('//*[@id="registrationform"]/form/div[3]/div/button'));
+});
+
+casper.wait(2000,function (){
+	casper.capture('/var/www/html/png/client/signup/signup/SignUpPage_fillform.png');
 });
 
 // Check if email id already exists (for this we check the error message on the screen). Based on this we decide to sign in/sign up.
