@@ -1293,7 +1293,7 @@ casper.then(function(){
 /***** BEGIN - Operation - dashboard ******/
 
 casper.then(function (){
-	casper.click(x('//*[@id="horizontal-nav"]/div[1]/a/i'));
+	casper.click(x('//*[text()="Dashboard"]'));
 });
 
 casper.wait(3000,function (){
@@ -1308,8 +1308,8 @@ casper.then(function(){
 
 /***** BEGIN - Operation - search ******/
 
-casper.then(function (){
-	casper.click(x('//*[text()="Dashboard"]'));
+casper.wait(2000,function (){
+	casper.click(x('//*[@id="header-tools"]/a/div/i'));	
 });
 
 casper.then(function (){
