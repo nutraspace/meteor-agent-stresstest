@@ -896,7 +896,7 @@ casper.then(function (){
 	casper.click(x('//*[text()="Range"]'));
 });
 
-casper.then(function (){
+/* casper.then(function (){
 	casper.click(x('//*[text()="Poly Fat"]'));
 });
 
@@ -942,13 +942,13 @@ casper.then(function (){
 
 casper.wait(2000,function (){
 	casper.capture('/var/www/html/png/client/food/range/Calories_from_Fat-food.png');
-});
+}); */
 
 /* casper.then(function (){
 	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div'));	
 }); */
 
-casper.wait(2000,function (){
+/* casper.wait(2000,function (){
 	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[1]'));	
 });
 
@@ -994,13 +994,13 @@ casper.wait(2000,function (){
 
 casper.wait(2000,function (){
 	casper.capture('/var/www/html/png/client/food/range/Folate-food.png');
-});
+}); */
 
 /* casper.then(function (){
 	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div'));	
 }); */
 
-casper.then(function (){
+/* casper.then(function (){
 	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[1]'));	
 });
 
@@ -1046,13 +1046,13 @@ casper.then(function (){
 
 casper.wait(2000,function (){
 	casper.capture('/var/www/html/png/client/food/range/Cholesterol_food.png');
-});
+}); */
 
 /* casper.then(function (){
 	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div'));	
 }); */
 
-casper.then(function (){
+/* casper.then(function (){
 	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[1]'));	
 });
 
@@ -1098,13 +1098,13 @@ casper.then(function (){
 
 casper.wait(2000,function (){
 	casper.capture('/var/www/html/png/client/food/range/Trans_Fatty_Acid-food.png');
-});
+}); */
 
 /* casper.then(function (){
 	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div'));	
 }); */
 
-casper.then(function (){
+/* casper.then(function (){
 	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[1]'));	
 });
 
@@ -1150,13 +1150,13 @@ casper.then(function (){
 
 casper.wait(2000,function (){
 	casper.capture('/var/www/html/png/client/food/range/Carbohydrates-food.png');
-});
+}); */
 
 /* casper.then(function (){
 	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div'));	
 }); */
 
-casper.then(function (){
+/* casper.then(function (){
 	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[1]'));	
 });
 
@@ -1202,19 +1202,19 @@ casper.then(function (){
 
 casper.wait(2000,function (){
 	casper.capture('/var/www/html/png/client/food/range/Fat_food.png');
-});
+}); */
 
 /* casper.then(function (){
 	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[3]/div[2]/div'));	
 }); */
 
-casper.wait(2000,function (){
+/* casper.wait(2000,function (){
 	casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a'));	
 });
 
 casper.then(function (){
 	casper.capture('/var/www/html/png/client/food/range/Vitamin_A_RE-food.png');
-});
+}); */
 
 casper.then(function(){
 	this.echo("STEP 5 - Food Operation Success");
