@@ -68,7 +68,7 @@ casper.waitForSelector(x('//*[@id="registrationform"]/form/div[3]/div/button'),f
 casper.wait(2000, function (){
 	if (x('//*[text()="problem"]')) {
 		signup_error = "true";
-		casper.capture('png/client/signup_signin/signup_signin.png');
+		casper.capture('/var/www/html/png/client/signup_signin/signup_signin.png');
 	}
 });
 
