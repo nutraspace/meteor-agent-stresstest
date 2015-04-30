@@ -21,7 +21,7 @@ var password = casper.cli.get("password");
 var url = casper.cli.get("url");	
 	
 /* flag to test if email ID exist in the system or now */	
-var signup_error = false;	
+var signup_error = "false";	
 	
 /***** BEGIN - Landing Page ******/
 
@@ -67,14 +67,13 @@ casper.waitForSelector(x('//*[@id="registrationform"]/form/div[3]/div/button'),f
 // Check if email id already exists
 casper.wait(2000, function (){
 	if (x('//*[text()="problem"]')) {
-		signup_error = true;
-		this.echo("email id exist");	
+		signup_error = "true"";
 		casper.capture('png/client/signup_signin/signup_signin.png');
 	}
 });
 
 casper.then(function (){
-	if (signup_error)
+	if (signup_error == "true")
 		{
 			//Sign In
 			casper.then(function (){
