@@ -67,7 +67,7 @@ casper.waitForSelector(x('//*[@id="registrationform"]/form/div[3]/div/button'),f
 // Check if email id already exists
 casper.wait(2000, function (){
 	if (x('//*[text()="problem"]')) {
-		signup_error = "true"";
+		signup_error = "true";
 		casper.capture('png/client/signup_signin/signup_signin.png');
 	}
 });
