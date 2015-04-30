@@ -1320,7 +1320,7 @@ casper.wait(2000,function (){
 	casper.capture('/var/www/html/png/client/search/typeahead_results-search.png');	
 });
 
-casper.wait(2000,function (){
+/* casper.wait(2000,function (){
 	casper.click(x('//*[text()="diabetes faqs"]'));	
 });
 
@@ -1334,7 +1334,7 @@ casper.wait(2000,function (){
 
 casper.wait(2000,function (){
 	casper.capture('/var/www/html/png/client/search/results-search.png');	
-});
+}); */
 
 casper.then(function(){
 	this.echo("STEP 9 - Search Operation Success");
