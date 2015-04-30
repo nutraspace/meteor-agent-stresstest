@@ -64,13 +64,10 @@ casper.waitForSelector(x('//*[@id="registrationform"]/form/div[3]/div/button'),f
 	casper.click(x('//*[@id="registrationform"]/form/div[3]/div/button'));
 });
 
-// Check if email id already exists
-casper.wait(2000, function (){
-	if (x('//*[text()="problem"]')) {
-		signup_error = "true";
-		casper.capture('/var/www/html/png/client/signup_signin/signup_signin.png');
-	}
-});
+// Check if email id already exists, for this we check the error message on the screen 
+if (casper.exists(x('//*[@id="registrationform"]/form/div[3]/div[1]'))) {
+	signup_error = "true";
+}
 
 casper.then(function (){
 	if (signup_error == "true")
