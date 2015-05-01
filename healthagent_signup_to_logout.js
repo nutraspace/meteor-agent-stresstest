@@ -26,6 +26,29 @@ phantom.clearCookies();
 
 casper.start(url).viewport(1280,1024);
 
+// if the account didn't logout previously then force the logout
+casper.then(function (){
+	if (!casper.exists(x('//*[@id="power"]/div[3]/div/div/div[1]/div/ul/li/a/span')))
+		{
+			
+			casper.then(function (){
+				casper.click(x('//*[@id="header-tools"]/div'));
+			});
+
+			casper.wait(2000,function (){
+				casper.click(x('//*[text()="Logout"]'));
+			});
+
+			casper.wait(10000,function (){
+				casper.capture('/var/www/html/png/client/logout/logoutPage1.png');
+			});		
+
+			casper.then(function(){
+				this.echo("Note: Your previous operation didn't log out ... logging out now and your tests shall begin!");
+			});			
+		}
+});
+
 casper.wait(3000,function(){
 	this.echo(this.getTitle());
 	this.echo("--------------------------");	
