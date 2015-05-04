@@ -57,7 +57,7 @@ casper.wait(3000,function(){
 });
 
 casper.then(function (){
-	casper.reload("http://10.0.0.28:4000/");
+	casper.reload("http://10.0.0.28:4001/");
 });
 
 casper.wait(5000, function (){
@@ -69,7 +69,7 @@ casper.wait(5000, function (){
 //Sign Up
 
 casper.then(function (){
-	casper.reload("http://10.0.0.28:4000/");
+	casper.reload("http://10.0.0.28:4001/");
 });
 
 casper.wait(5000, function (){
