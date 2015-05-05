@@ -1293,7 +1293,7 @@ casper.then(function (){
 
 			/* nutrition */
 			casper.then(function (){
-				casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[2]'));
+				casper.click(x('//*[text()="Nutrition"]'));
 			});
 
 			casper.wait(2000,function (){
@@ -1326,7 +1326,7 @@ casper.then(function (){
 
 			/* fitness */
 			casper.then(function (){
-				casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[3]'));
+				casper.click(x('//*[text()="Fitness"]'));
 			});
 
 			casper.wait(2000,function (){
@@ -1359,7 +1359,7 @@ casper.then(function (){
 
 			/* wearables_devices */
 			casper.then(function (){
-				casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[4]'));
+				casper.click(x('//*[text()="Wearables and Devices"]'));
 			});
 
 			casper.wait(2000,function (){
@@ -1390,7 +1390,7 @@ casper.then(function (){
 
 			/* additional_diagnostics */
 			casper.then(function (){
-				casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[5]'));
+				casper.click(x('//*[text()="Additional Diagnostics"]'));
 			});
 
 			casper.wait(2000,function (){
@@ -1433,12 +1433,12 @@ casper.then(function (){
 
 			/* payment_settings */
 			casper.then(function (){
-				casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[6]'));
+				casper.click(x('//*[text()="Payment Settings"]'));
 			});
 
-			casper.wait(2000,function (){
+			casper.waitForSelector(x('//*[@id="payment"]/form/div[3]/div/button[1]'),function (){
 				casper.capture('/var/www/html/png/client/signup/profile/payment_settings/empty_payment_settings-profile.png');	
-			});
+			});	
 
 			casper.then(function (){
 				casper.sendKeys(x('//*[@id="addressInfo"]/div/div[1]/input'), "10227 N MacArthur Blvd")
@@ -1488,7 +1488,7 @@ casper.then(function (){
 
 			/* getting_started */
 			casper.then(function (){
-				casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[7]'));
+				casper.click(x('//*[text()="Getting Started"]'));
 			});
 
 			casper.wait(2000,function (){
@@ -1521,8 +1521,9 @@ casper.then(function (){
 
 			/* dietary_needs */
 			casper.then(function (){
-				casper.click(x('//*[@id="power"]/div[3]/div/div[2]/div/div[1]/div/div/div/div[2]/div/a[8]'));	
-			});
+				casper.click(x('//*[text()="Dietary Needs"]'));
+			});			
+			
 
 			casper.wait(2000,function (){
 				casper.capture('/var/www/html/png/client/signup/profile/dietary_needs/dietary_needs-profile.png');	
