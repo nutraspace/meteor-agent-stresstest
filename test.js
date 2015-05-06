@@ -18,7 +18,7 @@ var x = require('casper').selectXPath;
 
 var email = "whatsup3@healthagent.com";
 var password = "He@lth2014Agent";	
-var url = "https://agentdev.nutraspace.com";	
+var url = "http://10.0.0.28:4001/";	
 	
 /***** BEGIN - Landing Page ******/
 
@@ -57,7 +57,7 @@ casper.wait(3000,function(){
 });
 
 casper.then(function (){
-	casper.reload("https://agentdev.nutraspace.com");
+	casper.reload(url);
 });
 
 casper.wait(5000, function (){
@@ -69,7 +69,7 @@ casper.wait(5000, function (){
 //Sign Up
 
 casper.then(function (){
-	casper.reload("https://agentdev.nutraspace.com");
+	casper.reload(url);
 });
 
 casper.wait(5000, function (){
