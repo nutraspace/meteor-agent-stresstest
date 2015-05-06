@@ -38,10 +38,10 @@ casper.then(function (){
 			casper.wait(2000,function (){
 				casper.click(x('//*[text()="Logout"]'));
 			});
-
-			casper.wait(10000,function (){
+			
+			casper.waitForSelector(x('//*[@id="power"]/div[3]/div/div/div[1]/div/ul/li/a/span'),function (){
 				casper.capture('/var/www/html/png/client/logout/logoutPage1.png');
-			});		
+			});			
 
 			casper.then(function(){
 				this.echo("Note: Your previous operation didn't log out ... logging out now and your tests shall begin!");
