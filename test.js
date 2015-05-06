@@ -27,7 +27,7 @@ phantom.clearCookies();
 casper.start(url).viewport(1280,1024);
 
 casper.then(function (){
-	casper.click(x('//*[@id="header-logo"]/a/img'));
+	casper.click(x('//*[@id="header-logo"]'));
 });		
 
 casper.wait(5000, function (){
