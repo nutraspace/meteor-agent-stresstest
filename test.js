@@ -16,7 +16,7 @@ var x = require('casper').selectXPath;
 
 /* get variables from command line */
 
-var email = "whatsup11@healthagent.com";
+var email = "whatsup15@healthagent.com";
 var password = "He@lth2014Agent";	
 var url = "http://10.0.0.28:4001/";	
 	
@@ -26,16 +26,22 @@ phantom.clearCookies();
 
 casper.start(url).viewport(1280,1024);
 
+casper.then(function (){
+	casper.click(x('//*[@id="header-logo"]/a/img'));
+});		
 
+casper.wait(5000, function (){
+	casper.capture('/var/www/html/png/client/status/status1.png');
+});	
 
 // if the account didn't logout previously then force the logout
 casper.then(function (){
-	if (!casper.exists(x('//*[@id="power"]/div[3]/div/div/div[1]/div/ul/li/a/span')))
+	if (!casper.exists(x('//*[@id="email"]')))
 		{			
 			casper.wait(5000, function (){
-				casper.capture('/var/www/html/png/client/status/status.png');
-			});
-			
+				casper.capture('/var/www/html/png/client/status/status2.png');
+			});			
+
 			casper.then(function (){
 				casper.click(x('//*[@id="header-tools"]/div'));
 			});
@@ -43,6 +49,10 @@ casper.then(function (){
 			casper.wait(2000,function (){
 				casper.click(x('//*[text()="Logout"]'));
 			});
+			
+			casper.wait(5000, function (){
+				casper.capture('/var/www/html/png/client/status/status3.png');
+			});					
 			
 			casper.waitForSelector(x('//*[@id="power"]/div[3]/div/div/div[1]/div/ul/li/a/span'),function (){
 				casper.capture('/var/www/html/png/client/logout/logoutPage1.png');
@@ -102,7 +112,7 @@ casper.waitForSelector(x('//*[@id="registrationform"]/form/div[3]/div/button'),f
 });
 
 casper.wait(5000,function (){
-	casper.capture('/var/www/html/png/client/signup/signup/SignUp_registered.png');
+	casper.capture('/var/www/html/png/client/signup/signup/SignUp_registered_or_not.png');
 });
 
 // Check if email id already exists (for this we check the error message on the screen). Based on this we decide to sign in/sign up.
