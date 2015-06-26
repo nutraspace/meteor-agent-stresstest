@@ -40,7 +40,7 @@ num_accounts=${#Accounts[*]}
 
 while :
     do
-        docker run --rm  dsweetnam/casperjs casperjs /usr/local/bin/parties/signup_to_logout.js --email=${Accounts[$((RANDOM%num_accounts))]} --url=$url --password=$password
+        docker run --rm  dsweetnam/casperjs casperjs /usr/local/bin/parties/active-test.js --email=${Accounts[$((RANDOM%num_accounts))]} --url=$url --password=$password
         #casperjs test agentdev_test.js --email=${Accounts[$((RANDOM%num_accounts))]} --password=$password    
         echo "yes" >> count.txt
 done
