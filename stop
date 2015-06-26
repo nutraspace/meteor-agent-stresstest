@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# populate Drones
+declare -a Drones=()
+while read line; do Drones=("${Drones[@]}" "$line"); done < drones
+
+# kill the immortal
+for i in "${Drones[@]}"
+do
+   #Immortal Casper Script Check
+   printf "\n"   
+   echo "######Show Number of tests run on $i######"
+   ssh $i "imm_test=\$(cat count.txt | wc -l); echo \$imm_test"
+   printf "\n"
+   echo "###### How many Immortal Casper(s) are running on $i######"
+#   ssh $i "pid=\$(ps aux | grep 'immortal' | grep -v grep | awk '{print \$2}'); echo \$pid"
+   ssh $i "pid=\$(ps aux | grep 'immortal' | grep -v grep | wc -l); echo \$pid"
+   printf "\n"
+   echo "###### How many Phantomjs(s) are running on $i######"
+#   ssh $i "pid=\$(ps aux | grep 'phantomjs' | grep -v grep | awk '{print \$2}'); echo \$pid"
+   ssh $i "pid=\$(ps aux | grep 'phantomjs' | grep -v grep | wc -l); echo \$pid"
+   printf "\n"
+   echo " #################################### "
+   echo " #########Killing Processes########## "
+   echo " #########PhantomJS & immortal########## "
+   echo " #################################### "
+   printf "\n"
+   ssh $i "pid=\$(ps -ef | grep -v grep | grep 'phantomjs' | awk '{print \$2}'  ); echo \$pid |xargs kill -9 "
+   ssh $i "pid=\$(ps -ef | grep -v grep | grep 'immortal' | awk '{print \$2}'  ); echo \$pid |xargs kill -9 "
+   printf "\n"
+   echo "######Show Number of Immortal Casper(s) running on $i######"
+   ssh $i "pid=\$(ps aux | grep 'immortal' | grep -v grep | wc -l); echo \$pid"
+   printf "\n"
+   echo "######Show Phantomjs(s) Information on $i######"
+   ssh $i "pid=\$(ps aux | grep 'phantomjs' | grep -v grep | wc -l); echo \$pid"
+   printf "\n"
+   #Casperjs Script Check
+#   echo "#######Proc ID/Email of Casperjs###### $i"
+#   echo "######Number of Casperjs Running####### $i"
+#   echo " #################################### $i"
+#   echo " #########Killing Processes########## $i"
+#   ssh $i "pid=\$(systemctl -l stop docker); echo  \$pid"
+#   ssh $i "pid=\$(systemctl -l status docker | grep Active); echo  \$pid"
+#   echo " #################################### $i"
+#   echo "######Number of Casperjs Running####### $i"   
+#   echo "####################################################"
+#   echo "ANY PROCESS THAT DOES NOT DIE WILL NEED TO BE KILL-9"
+#   echo "####################################################"
+
+
+#   echo "#############"
+#   echo "Show how many Dockerized Casper(s) are running on $i"
+#   ssh $i "pid=\$(docker ps -q | wc -l); echo \$pid"
+#   echo "Show how many Dockerized Casper(s) are zombies on $i"
+#   ssh $i "pid=\$(docker ps -a ); echo \$pid"
+#   ssh $i "pid=\$(docker top `docker ps -q`); echo \$pid"
+#   ssh $i "pid=\$(systemctl -l stop docker | grep Active); echo  \$pid"
+#   echo "#####END#####"
+done

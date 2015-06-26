@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# populate Drones
+declare -a Drones=()
+while read line; do Drones=("${Drones[@]}" "$line"); done < drones
+
+# Starting Docker Status
+for i in "${Drones[@]}"
+do
+   echo "#########Status of Docker Process on $i ##########"
+   ssh $i "var=\$(systemctl -l status docker | grep Active); echo  \$var"
+   printf "\n"
+   echo "####################################################"
+   echo "      Show Docker mnt & Container info on $i"
+   echo "####################################################"
+   printf "\n"
+   echo "Number of files in /var/lib/docker/devicemapper/mnt/ on $i"
+   ssh $i "var=\$(ls  /var/lib/docker/devicemapper/mnt/ | wc -l); echo \$var"
+   echo "Number of files in /var/lib/docker/containers/ on $i"
+   ssh $i "var=\$(ls  /var/lib/docker/containers | wc -l); echo \$var"
+   echo "#############"
+   echo "Show how Dockerized Casper(s) stats running on $i"
+   ssh $i "var=\$(docker stats `docker ps -qa`); echo \$var"
+   echo "#############"
+   ssh $i "var=\$(docker top `docker ps -qa`); echo \$var"
+   echo "#####END#####"
+   printf "\n"
+done

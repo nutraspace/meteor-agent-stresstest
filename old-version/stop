@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# populate Drones
+declare -a Drones=()
+while read line; do Drones=("${Drones[@]}" "$line"); done < drones
+
+# kill the immortalCasper
+for i in "${Drones[@]}"
+do
+   #Immortal Casper Script Check
+   echo "######Show Immortal Casper(s) $i######"
+   ssh $i "pid=\$(ps aux | grep 'healthagent_immortalCasper.sh' | grep -v grep); echo \$pid"
+   ssh $i "pid=\$(ps aux | grep 'healthagent_immortalCasper.sh' | grep -v grep | awk '{print \$2}'); echo \$pid"
+   ssh $i "pid=\$(ps aux | grep 'healthagent_immortalCasper.sh' | grep -v grep | wc -l); echo \$pid"
+   echo " #################################### $i"
+   echo " #########Killing Processes########## $i"
+   echo " #################################### $i"
+   ssh $i "pid=\$(ps aux | grep 'healthagent_immortalCasper.sh' | awk '{print \$2}' | grep -v grep | head -1); echo \$pid |xargs kill"
+   echo "######Show Immortal Casper(s) $i######"
+   ssh $i "pid=\$(ps aux | grep 'healthagent_immortalCasper.sh' | grep -v grep | wc -l); echo \$pid"
+
+   #Casperjs Script Check
+   echo "#######Proc ID/Email of Casperjs###### $i"
+   ssh $i "pid=\$(ps aux | grep 'casperjs' | grep 'email' | grep -v grep | awk '{print \$2,\$16}'); echo \$pid"
+   echo "######Number of Casperjs Running####### $i"
+   ssh $i "pid=\$(ps aux | grep 'casperjs' | grep 'email' | grep -v grep | wc -l); echo \$pid"
+   echo " #################################### $i"
+   echo " #########Killing Processes########## $i"
+   echo " #################################### $i"
+   ssh $i "pid=\$(ps aux | grep 'casperjs' | grep 'email' | grep -v grep | awk '{print \$2}' | head -1); echo \$pid |xargs kill"
+   echo "######Number of Casperjs Running####### $i"   
+   ssh $i "pid=\$(ps aux | grep 'casperjs' | grep 'email' | grep -v grep); echo \$pid"
+   echo "####################################################"
+   echo "ANY PROCESS THAT DOES NOT DIE WILL NEED TO BE KILL-9"
+   echo "####################################################"
+done

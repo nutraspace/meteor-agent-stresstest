@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# populate Drones
+declare -a Drones=()
+while read line; do Drones=("${Drones[@]}" "$line"); done < drones
+
+# kill the immortalCasper
+for i in "${Drones[@]}"
+do
+   #Immortal Casper Script Check
+   echo "######Show Immortal Casper(s) Information on $i######"
+#   ssh $i "pid=\$(ps aux | grep 'healthagent_immortalCasper.sh' | grep -v grep); echo \$pid"
+   ssh $i "pid=\$(ps aux | grep 'healthagent_immortalCasper.sh' | grep -v grep | awk '{print \$2}'); echo \$pid"
+   ssh $i "pid=\$(ps aux | grep 'healthagent_immortalCasper.sh' | grep -v grep | wc -l); echo \$pid"
+   echo " #################################### $i"
+   echo " #########Killing Processes########## $i"
+   echo " #################################### $i"
+   ssh $i "pid=\$(ps -ef | grep -v grep | grep 'healthagent_immortalCasper.sh' | head -1 | awk '{print \$2}'  ); echo \$pid |xargs kill"
+   echo "######Show Number of Immortal Casper(s) running on $i######"
+   ssh $i "pid=\$(ps aux | grep 'healthagent_immortalCasper.sh' | grep -v grep | wc -l); echo \$pid"
+
+   #Casperjs Script Check
+#   echo "#######Proc ID/Email of Casperjs###### $i"
+#   echo "######Number of Casperjs Running####### $i"
+#   echo " #################################### $i"
+   echo " #########Killing Processes########## $i"
+#   ssh $i "pid=\$(systemctl -l stop docker); echo  \$pid"
+   ssh $i "pid=\$(systemctl -l status docker | grep Active); echo  \$pid"
+#   echo " #################################### $i"
+#   echo "######Number of Casperjs Running####### $i"   
+#   echo "####################################################"
+#   echo "ANY PROCESS THAT DOES NOT DIE WILL NEED TO BE KILL-9"
+#   echo "####################################################"
+
+
+#   echo "#############"
+   echo "Show how many Dockerized Casper(s) are running on $i"
+   ssh $i "pid=\$(docker ps -q | wc -l); echo \$pid"
+   echo "Show how many Dockerized Casper(s) are zombies on $i"
+   ssh $i "pid=\$(docker ps -a ); echo \$pid"
+   ssh $i "pid=\$(docker top `docker ps -q`); echo \$pid"
+#   ssh $i "pid=\$(systemctl -l stop docker | grep Active); echo  \$pid"
+#   echo "#####END#####"
+done

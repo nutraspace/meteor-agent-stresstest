@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# populate Drones
+declare -a Drones=()
+while read line; do Drones=("${Drones[@]}" "$line"); done < drones
+
+# How Many Caspers instances
+for i in "${Drones[@]}"
+do
+   echo "Show Immortal Casper(s) are running on $i"
+   ssh $i "pid=\$(ps aux | grep 'healthagent_immortalCasper.sh' | grep -v grep | wc -l); echo \$pid"
+   echo "#####################"
+   echo "Show how many Casper(s) are running on $i"   
+   ssh $i "pid=\$(ps aux | grep 'casperjs' | grep 'email' | grep -v grep | wc -l); echo \$pid"
+   ssh $i "pid=\$(ps aux | grep 'casperjs' | grep 'email' | awk '{print \$16}'| grep -v grep); echo  \$pid"
+   echo "#####END#####"
+done

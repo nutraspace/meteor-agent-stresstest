@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# populate Drones
+declare -a Drones=()
+while read line; do Drones=("${Drones[@]}" "$line"); done < drones
+
+# How Many Caspers instances
+for i in "${Drones[@]}"
+do
+   echo "####START####"
+   echo "Show how many Immortal Casper(s) are running on $i"
+   ssh $i "imm_run=\$(ps aux | grep -v grep | grep 'healthagent_immortalCasper.sh' | wc -l); echo \$imm_run"
+   echo "#############"
+   echo "Show Immortal Casper(s) information on $i"
+   ps aux | head -1
+   ssh $i "imm_num=\$(ps aux | grep -v grep | grep 'healthagent_immortalCasper.sh'); echo \$imm_num"
+   echo "#############"
+   echo "Show how many tests have run on $i"
+   ssh $i "imm_test=\$(cat count.txt | wc -l); echo \$imm_test"
+   echo "#############"   
+
+# Docker Information
+
+   echo "Show how many Dockerized Casper(s) are actively running on $i"  
+   ssh $i "var=\$(docker ps -q | wc -l); echo \$var"
+   echo "#############"
+   echo "Show how many Dockerized Casper(s) are zombies on $i"
+   echo "#############"
+   ssh $i "var=\$(docker ps -a ); echo \$var"
+#   ssh $i "var=\$(docker top `docker ps -q`); echo \$var"
+   echo "#############"
+   echo "Show Docker Service Status on $i"
+   ssh $i "var=\$(systemctl -l status docker | grep Active); echo  \$var"
+   echo "#####END#####"
+done

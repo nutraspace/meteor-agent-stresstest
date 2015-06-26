@@ -1,0 +1,118 @@
+#!/bin/bash
+
+# Script Variables
+dronenum="`cat drones | wc -l`"
+
+# Email / Account creation
+
+var1="temp.txt"
+touch $var1
+WORDLINE=$((($RANDOM * $RANDOM) % $(wc -w /usr/share/dict/words | awk '{print $1}')))"p" && sed -n $WORDLINE /usr/share/dict/words > $var1
+OUTPUT="$(cat $var1)"
+email='@healthagent.com'
+echo > accounts
+printf "\n"
+printf "How many emails/accounts do you want to create?\n"
+read n
+printf "\n"
+for ((i=1; i<=n; i++)) {
+printf "${OUTPUT}%d$email\n" $i >> accounts
+}
+printf "\n"
+rm -f $var1
+echo "$(tail -n +2 accounts)" > accounts
+echo "Count of lines in the accounts file"
+cat accounts | wc -l
+# Beginning start.sh
+
+# read options
+while getopts ":u:p:f:" opt; do
+  case $opt in
+    u)
+      echo "URL set to $OPTARG" >&2
+      url="$OPTARG"
+      ;;
+    p)
+      echo "PASSWORD set to $OPTARG" >&2
+      password="$OPTARG"
+      ;;
+    f)
+      echo "FILE set to $OPTARG" >&2
+      file="$OPTARG"
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
+# Usage information
+if [ -z "$password" -o -z "$url"  ]; then
+    echo "Usage: ./start.sh -u <HTTP://URL> -p <PASSWORD> -f <file>"
+    exit
+fi
+
+# populate Drones
+declare -a Drones=()
+while read line; do Drones=("${Drones[@]}" "$line"); done < drones
+
+# copy all files to the Drones
+for i in "${Drones[@]}"
+
+do
+   echo -e "$i"
+   ssh -t $i hostname
+   scp accounts $i:/root/accounts
+   rsync -av /usr/local/bin/parties/js_scripts/ $i:/root
+   scp immortal.sh $i:/root/immortal.sh
+   ssh -t $i chmod +x /root/immortal.sh
+   ssh -t $i ls -ltrha /root/immortal.sh
+   printf "\n"
+done
+
+printf "\n"
+
+###################
+
+echo "How many active containers to you want running tests per drone (Please run only 1 – 8 containers with the current drones)."
+printf "\n"
+read number
+printf "\n"
+echo "$(($number*$dronenum)) total"
+
+# Set number of Tests per drone
+for r in $(seq 1 $number)
+do
+        # run casper in all drones 
+        for i in "${Drones[@]}"
+        do
+             ssh $i "nohup /root/immortal.sh -u $url -p $password > /dev/null 2>&1 & "
+             echo IMMORTAL STARTED on $i!
+        done
+done
+
+# End of start.sh
+
+############################
+
+# Pulling status information after Start
+
+echo "##### Parties has started and is running #####"
+echo "##### Run ./status to check tests#####"
+
+#sleep 2
+   
+#printf "\n"
+
+# How Many Caspers instances
+#for i in "${Drones[@]}"
+#do
+#   echo "Show Immortal Casper(s) are running on $i"
+#   printf "\n"
+#   ssh $i "pid=\$(ps aux | grep 'immortalCasper' | grep -v grep | wc -l); echo \$pid"
+#   echo "#############"
+#done
