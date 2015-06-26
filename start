@@ -67,7 +67,7 @@ do
    echo -e "$i"
    ssh -t $i hostname
    scp accounts $i:/root/accounts
-   rsync -av /usr/local/bin/parties/js_scripts/ $i:/root
+   rsync -av /usr/local/bin/parties/meteor-agent-stresstest/js_scripts/ $i:/root
    scp immortal.sh $i:/root/immortal.sh
    ssh -t $i chmod +x /root/immortal.sh
    ssh -t $i ls -ltrha /root/immortal.sh
@@ -113,6 +113,6 @@ echo "##### Run ./status to check tests#####"
 #do
 #   echo "Show Immortal Casper(s) are running on $i"
 #   printf "\n"
-#   ssh $i "pid=\$(ps aux | grep 'immortalCasper' | grep -v grep | wc -l); echo \$pid"
+#   ssh $i "pid=\$(ps aux | grep 'immortal' | grep -v grep | wc -l); echo \$pid"
 #   echo "#############"
 #done
